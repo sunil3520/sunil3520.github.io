@@ -38,7 +38,7 @@ const Navbar = () => {
   return (
     <div>
       <>
-        <Box backgroundColor={"#7db5df"} id="nav-menu"  marginTop={"0px"} width={"100%"} position="sticky">
+        <Box backgroundColor={"#7db5df"} id="nav-menu"  marginTop={"0px"} w="100%"  position="sticky" border={"1px solid red"}>
           <Flex h={20} alignItems={"center"} justifyContent={"space-between"}>
             <IconButton
             display={{ md: "none" }}
@@ -48,7 +48,7 @@ const Navbar = () => {
               
               onClick={isOpen ? onClose : onOpen}
             />
-            <HStack spacing={50} alignItems={"center"}>
+            <HStack spacing={50} alignItems={"center"} width="100%" >
               <div
                 style={{
                   marginLeft: "20px",
@@ -60,15 +60,20 @@ const Navbar = () => {
               </div>
               <HStack
                 as={"nav"}
-                spacing={"35%"}
+              
                 display={{ base: "none", md: "flex" }}
+                 width="55%"
+                 justifyContent={"space-around"}
+               
               >
                {links.map((el)=>{
                return (
                 <Link  to={el.path}>{el.text}</Link>
                )
                })}
-                <Box>
+                
+              </HStack>
+              <Box>
                   <Button className="nav-linke resume" >
                     Resume
                     <span>
@@ -76,7 +81,6 @@ const Navbar = () => {
                     </span>
                   </Button>
                 </Box>
-              </HStack>
             </HStack>
           </Flex>
 
