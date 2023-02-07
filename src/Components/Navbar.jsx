@@ -1,108 +1,133 @@
-import React from "react";
-import { Link } from "react-router-dom";
+
+
 import {
   Box,
   Flex,
-  Avatar,
-  HStack,
   
+  HStack,
+  Link,
   IconButton,
   Button,
  
   useDisclosure,
   useColorModeValue,
   Stack,
-  position,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton,
+  DrawerHeader,
+  DrawerBody,
+  
+  Drawer,
 } from "@chakra-ui/react";
+import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+import { HiDownload } from "react-icons/hi";
+import { NavLink } from "react-router-dom";
+import { useRef } from "react";
 
-// import { ClassNames } from "@emotion/react";
-
-//Icons imported here
-import { HiDownload } from 'react-icons/hi';
-import { HamburgerIcon, CloseIcon, AddIcon } from "@chakra-ui/icons";
-
-const links = [
-  { text: "Home", path: "/", ClassName: "nav-linke home" },
-  { text: "About", path: "/about", ClassName: "nav-linke about" },
-  { text: "Skills", path: "/skills", ClassName: "nav-linke skills" },
-  { text: "Projects", path: "/projects", ClassName: "nav-linke projects" },
-  { text: "Contact", path: "/contact", ClassName: "nav-linke contact" },
+const Links = [
+  { text: "Home", path: "/", class: "nav-linke home" },
+  { text: "About", path: "/about", class: "nav-linke about" },
+  { text: "Skills", path: "/skills", class: "nav-linke skills" },
+  { text: "Projects", path: "/projects", class: "nav-linke projects" },
+  { text: "Contact", path: "/contact", class: "nav-linke contact" },
   // { text: "Resume", path: "/resume", ClassName: "nav-linke resume" },
 ];
 
-const { isOpen, onOpen, onClose } = useDisclosure;
+const NavItem = ({ children }) => (
+  <Link
+    px={2}
+    py={1}
+    rounded={"md"}
+    _hover={{
+      textDecoration: "none",
+      bg: useColorModeValue("gray.200", "gray.700"),
+    }}
+    href={"/"}
+  >
+    {children}
+  </Link>
+);
 
-
-
-const Navbar = () => {
+export default function Navbar() {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const btnRef = useRef();
   return (
-    <div>
-      <>
-        <Box backgroundColor={"#7db5df"} id="nav-menu"  marginTop={"0px"} w="100%"  position="sticky" border={"1px solid red"}>
-          <Flex h={20} alignItems={"center"} justifyContent={"space-between"}>
-            <IconButton
+    <>
+      <Box
+        bg={useColorModeValue("#778899")}
+        px={4}
+        width="100%"
+        paddingRight={"5%"}
+      >
+        <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
+          <IconButton
+            size={"md"}
+            icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+            aria-label={"Open Menu"}
             display={{ md: "none" }}
-              size={"md"}
-              icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-              aria-label={"Open Menu"}
-              
-              onClick={isOpen ? onClose : onOpen}
-            />
-            <HStack spacing={50} alignItems={"center"} width="100%" >
-              <div
-                style={{
-                  marginLeft: "20px",
-                  fontSize: "30px",
-                  marginRight: "50px",
-                }}
-              >
-                <Box><b>SUNIL</b></Box>
-              </div>
-              <HStack
-                as={"nav"}
-              
-                display={{ base: "none", md: "flex" }}
-                 width="55%"
-                 justifyContent={"space-around"}
-               
-              >
-               {links.map((el)=>{
-               return (
-                <Link  to={el.path}>{el.text}</Link>
-               )
-               })}
-                
-              </HStack>
+            onClick={isOpen ? onClose : onOpen}
+          />
+          <HStack spacing={8} alignItems={"center"}>
+            <div
+              style={{
+                marginLeft: "10%",
+                fontSize: "30px",
+                marginRight: "20%",
+              }}
+            >
               <Box>
-                  <Button className="nav-linke resume" >
-                    Resume
-                    <span>
-                      <HiDownload/>
-                    </span>
-                  </Button>
-                </Box>
+                <b>SUNIL</b>
+              </Box>
+            </div>
+            <HStack display={{ base: "none", md: "flex" }} gap="20%">
+              {Links.map((link) => (
+                <NavLink to={link.path} className={link.class}>
+                  <NavItem key={link.text}>{link.text}</NavItem>
+                </NavLink>
+              ))}
             </HStack>
+          </HStack>
+          <Flex alignItems={"center"}>
+            <Button className="nav-linke resume">
+              Resume
+              <span>
+                <HiDownload />
+              </span>
+            </Button>
           </Flex>
+        </Flex>
 
-          {isOpen ? (
-            <Box pb={4} display={{ md: "none" }}>
-              <Stack as={"nav"} spacing={4}>
-              {links.map((el)=>{
-               return (
-                <Link  to={el.path}>{el.text}</Link>
-               )
-               })}
+        {isOpen ? (
+          <Box pb={4} display={{ md: "none" }}>
+            <Stack>
+              <Drawer
+              
+                isOpen={isOpen}
+                placement="left"
+                onClose={onClose}
+                finalFocusRef={btnRef}
+              >
+                <DrawerOverlay />
+                <DrawerContent border={"1px solid red"} width="200px">
+                  <DrawerCloseButton />
+                  <DrawerHeader>Create your account</DrawerHeader>
 
-               
-              </Stack>
-            </Box>
-          ) : null}
-        </Box>
+                  <DrawerBody display={"flex"} flexDirection="column"  >
+                    {Links.map((link) => (
+                      <NavLink to={link.path} className={link.class}>
+                        <NavItem key={link.text}>{link.text}</NavItem>
+                      </NavLink>
+                    ))}
+                  </DrawerBody>
+                </DrawerContent>
+              </Drawer>
+            </Stack>
+          </Box>
+        ) : null}
+      </Box>
 
-        
-      </>
-    </div>
+      
+    </>
   );
-};
-
-export default Navbar;
+}
