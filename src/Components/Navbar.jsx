@@ -1,37 +1,26 @@
-
-
 import {
   Box,
   Flex,
-  
   HStack,
   Link,
   IconButton,
   Button,
- 
   useDisclosure,
   useColorModeValue,
   Stack,
-  DrawerOverlay,
-  DrawerContent,
-  DrawerCloseButton,
-  DrawerHeader,
-  DrawerBody,
-  
-  Drawer,
+  Image,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
-import { HiDownload } from "react-icons/hi";
-import { NavLink } from "react-router-dom";
-import { useRef } from "react";
+import { NavLink, useLocation } from "react-router-dom";
+import React, { useEffect } from "react";
 
 const Links = [
-  { text: "Home", path: "/", class: "nav-linke home" },
-  { text: "About", path: "/about", class: "nav-linke about" },
-  { text: "Skills", path: "/skills", class: "nav-linke skills" },
-  { text: "Projects", path: "/projects", class: "nav-linke projects" },
-  { text: "Contact", path: "/contact", class: "nav-linke contact" },
-  // { text: "Resume", path: "/resume", ClassName: "nav-linke resume" },
+  { to: "/", name: "Home", class: "nav-link home" },
+  { to: "/about", name: "About Me", class: "nav-link about" },
+  { to: "/projects", name: "Projects", class: "nav-link projects" },
+  { to: "/techstack", name: "Tech-Stack", class: "nav-link techstack" },
+  { to: "/skills", name: "Skills", class: "nav-link skills" },
+  { to: "/contact", name: "Contact", class: "nav-link contact" },
 ];
 
 const NavItem = ({ children }) => (
@@ -41,24 +30,66 @@ const NavItem = ({ children }) => (
     rounded={"md"}
     _hover={{
       textDecoration: "none",
-      bg: useColorModeValue("gray.200", "gray.700"),
+      bg: "red.800",
+      color: "white",
     }}
+    color="black"
+    fontWeight="bold"
+    textAlign="center"
+    fontSize="18px"
     href={"/"}
   >
     {children}
   </Link>
 );
 
-export default function Navbar() {
+export default function Navbar({ refs }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const btnRef = useRef();
+  const location = useLocation();
+
+  useEffect(() => {
+    console.log("location", location.pathname);
+    switch (location.pathname) {
+      case "/about":
+        scrollSmoothHandler(refs.aboutRef);
+        break;
+
+      case "/projects":
+        scrollSmoothHandler(refs.projectRef);
+        break;
+
+      case "/techstack":
+        scrollSmoothHandler(refs.techStackRef);
+        break;
+
+      case "/skills":
+        scrollSmoothHandler(refs.skillsRef);
+        break;
+
+      case "/contact":
+        scrollSmoothHandler(refs.contactRef);
+        break;
+
+      default:
+        scrollSmoothHandler(refs.homeRef);
+        break;
+    }
+  }, [location, refs]);
+
+  const scrollSmoothHandler = (ref) => {
+    console.log("Triggered.");
+    ref.current.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <>
+    <div id="nav-menu">
       <Box
-        bg={useColorModeValue("#778899")}
+        box-shadow="rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px"
+        bg={useColorModeValue("white", "black.900")}
         px={4}
-        width="100%"
-        paddingRight={"5%"}
+        pos="fixed"
+        zIndex={2}
+        w="100%"
       >
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <IconButton
@@ -69,65 +100,76 @@ export default function Navbar() {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={"center"}>
-            <div
-              style={{
-                marginLeft: "10%",
-                fontSize: "30px",
-                marginRight: "20%",
-              }}
-            >
-              <Box>
-                <b>SUNIL</b>
+            {/* Navbar Logo */}
+            <NavLink to="/">
+              {/* <Image
+                objectFit="cover"
+                boxSize="100%"
+                width="125px"
+                height="50px"
+                src={"Logo.jpeg"}
+              /> */}
+              <Box color="black" fontWeight="bold" marginRight={"150px"} marginLeft="20px" fontSize="35px">
+                SUNIL
               </Box>
-            </div>
-            <HStack display={{ base: "none", md: "flex" }} gap="20%">
+            </NavLink>
+
+            {/* Navbar items */}
+            <HStack
+              as={"nav"}
+              spacing={4}
+              display={{ base: "none", md: "flex" }}
+            >
               {Links.map((link) => (
-                <NavLink to={link.path} className={link.class}>
-                  <NavItem key={link.text}>{link.text}</NavItem>
+                <NavLink to={link.to} className={link.class}>
+                  {" "}
+                  <NavItem key={link.name}>{link.name}</NavItem>
                 </NavLink>
               ))}
             </HStack>
           </HStack>
+
+          {/* Resume Button */}
           <Flex alignItems={"center"}>
-            <Button className="nav-linke resume">
-              Resume
-              <span>
-                <HiDownload />
-              </span>
-            </Button>
+            <a target="_blank" href="Sunil_Chaudhary_Resume.pdf" download>
+              <Button
+              marginRight={"50px"}
+                id="resume-button-1"
+                className="nav-link resume"
+                display={"inline-flex"}
+                fontSize={"md"}
+                fontWeight={"bold"}
+                letterSpacing="2px"
+                color={"white"}
+                bg={"black"}
+                href={"#"}
+                _hover={{
+                  bg: "white",
+                  color: "red.800",
+                  border: "1px solid red",
+                }}
+              >
+                Resume
+              </Button>
+            </a>
           </Flex>
         </Flex>
 
         {isOpen ? (
-          <Box pb={4} display={{ md: "none" }}>
-            <Stack>
-              <Drawer
-              
-                isOpen={isOpen}
-                placement="left"
-                onClose={onClose}
-                finalFocusRef={btnRef}
-              >
-                <DrawerOverlay />
-                <DrawerContent border={"1px solid red"} width="200px">
-                  <DrawerCloseButton />
-                  <DrawerHeader>Create your account</DrawerHeader>
-
-                  <DrawerBody display={"flex"} flexDirection="column"  >
-                    {Links.map((link) => (
-                      <NavLink to={link.path} className={link.class}>
-                        <NavItem key={link.text}>{link.text}</NavItem>
-                      </NavLink>
-                    ))}
-                  </DrawerBody>
-                </DrawerContent>
-              </Drawer>
+          <Box pb={4} display={{ md: "none" }} p="static">
+            <Stack as={"nav"} spacing={4}>
+              {Links.map((link) => (
+                <NavLink to={link.to} className={link.class}>
+                  {" "}
+                  <NavItem key={link.name}>{link.name}</NavItem>
+                </NavLink>
+              ))}
             </Stack>
           </Box>
         ) : null}
       </Box>
 
-      
-    </>
+      {/* <Box p={4}>Main Content Here</Box> */}
+    </div>
   );
 }
