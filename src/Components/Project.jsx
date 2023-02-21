@@ -70,7 +70,7 @@ const Project = forwardRef((props, ref) => {
                   fontSize={"xl"}
                   fontFamily={"body"}
                 >
-                  TradeMart.com
+                  Purplle.com
                 </Heading>
 
                 <Text
@@ -186,7 +186,7 @@ const Project = forwardRef((props, ref) => {
                   fontSize={"xl"}
                   fontFamily={"body"}
                 >
-                  Beautybebo.com - Clone
+                  NatureBasket - Clone
                 </Heading>
 
                 <Text
