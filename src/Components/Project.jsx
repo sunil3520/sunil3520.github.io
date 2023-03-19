@@ -267,7 +267,7 @@ const Project = forwardRef((props, ref) => {
           </GridItem>
 
           {/* Third Project */}
-          {/* {/* <GridItem className="project-card">
+           <GridItem className="project-card">
             <Stack
               borderWidth="1px"
               borderRadius="lg"
@@ -285,7 +285,7 @@ const Project = forwardRef((props, ref) => {
                 <Image
                   objectFit="cover"
                   boxSize="100%"
-                  src={"sugarcosmetics.jpeg"}
+                  src={"dont&key.jpg"}
                 />
               </Flex>
               <Stack
@@ -301,7 +301,7 @@ const Project = forwardRef((props, ref) => {
                   fontSize={"xl"}
                   fontFamily={"body"}
                 >
-                  SugarCosmetics.com - Clone
+                  An E-commerse website
                 </Heading>
 
                 <Text
@@ -310,9 +310,7 @@ const Project = forwardRef((props, ref) => {
                   color={useColorModeValue("gray.700", "gray.400")}
                   px={3}
                 >
-                  Sugar Cosmetics is one of India's fastest-growing premium
-                  cosmetic companies. it has become the first choice of many
-                  Indian women.
+                  An Ecommerce Website
                 </Text>
 
                 <Stack
@@ -327,7 +325,7 @@ const Project = forwardRef((props, ref) => {
                   </Text>
                 </Stack>
 
-                <Text>An individual project executed in 4 days.</Text>
+                <Text>Group project executed in 4 days.</Text>
 
                 <Stack
                   width={"70%"}
@@ -340,7 +338,7 @@ const Project = forwardRef((props, ref) => {
                 >
                   <Link
                     className="project-github-link"
-                    href="https://github.com/shivamkumar24/SugarCosmetics.com-Clone"
+                    href="https://github.com/Aman3512/Binary_Beasts_2.0"
                     target={"_blank"}
                   >
                     <Button
@@ -356,7 +354,7 @@ const Project = forwardRef((props, ref) => {
                   </Link>
                   <Link
                     className="project-deployed-link"
-                    href="https://effortless-strudel-bc1dac.netlify.app/"
+                    href="https://ornate-paletas-950328.netlify.app/"
                     target={"_blank"}
                   >
                     <Button
@@ -383,8 +381,8 @@ const Project = forwardRef((props, ref) => {
             </Stack>
           </GridItem>
 
-          {/* Fourth Project */}
-          {/* <GridItem className="project-card">
+          {/* //  Fourth Project  */}
+           <GridItem className="project-card">
             <Stack
               borderWidth="1px"
               borderRadius="lg"
@@ -399,7 +397,7 @@ const Project = forwardRef((props, ref) => {
               textAlign="center"
             >
               <Flex flex={1} bg="blue.200">
-                <Image objectFit="cover" boxSize="100%" src={"myntra.jpeg"} />
+                <Image objectFit="cover" boxSize="100%" src={"bewkoof.jpg"} />
               </Flex>
               <Stack
                 flex={1}
@@ -414,7 +412,7 @@ const Project = forwardRef((props, ref) => {
                   fontSize={"xl"}
                   fontFamily={"body"}
                 >
-                  Myntra.com - Clone
+                  Bewkoof.com Clone
                 </Heading>
 
                 <Text
@@ -423,9 +421,7 @@ const Project = forwardRef((props, ref) => {
                   color={useColorModeValue("gray.700", "gray.400")}
                   px={3}
                 >
-                  Myntra is a one stop shop for all your fashion and lifestyle
-                  needs. Being India's largest e-commerce store for fashion and
-                  lifestyle products
+                  An Ecommerse website
                 </Text>
 
                 <Stack
@@ -453,7 +449,7 @@ const Project = forwardRef((props, ref) => {
                 >
                   <Link
                     className="project-github-link"
-                    href="https://github.com/shivamkumar24/Myntra_Clone"
+                    href="https://github.com/atheist31/legit-substance-7075"
                     target={"_blank"}
                   >
                     <Button
@@ -469,7 +465,7 @@ const Project = forwardRef((props, ref) => {
                   </Link>
                   <Link
                     className="project-deployed-link"
-                    href="https://idyllic-begonia-67c760.netlify.app/"
+                    href="https://delicate-mooncake-6ba932.netlify.app/"
                     target={"_blank"}
                   >
                     <Button
@@ -494,8 +490,8 @@ const Project = forwardRef((props, ref) => {
                 </Stack>
               </Stack>
             </Stack>
-          </GridItem> */} */}
-        </Grid> */}
+          </GridItem> 
+        </Grid> 
       </Stack>
     </section>
   );
