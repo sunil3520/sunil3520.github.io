@@ -99,7 +99,7 @@ const Skills = forwardRef((props, ref) => {
                 height="130px"
                 margin="2px 18%"
                 src={
-                  "https://abhijitnr.github.io/static/media/creativity1.445675a0a00c2757a1d6.png"
+                  "https://s3.amazonaws.com/creativity-post/uploads/_articleHeader/iStock_000017945529Medium.jpg"
                 }
               />
 
@@ -135,7 +135,7 @@ const Skills = forwardRef((props, ref) => {
                 height="130px"
                 margin="2px 18%"
                 src={
-                  "https://abhijitnr.github.io/static/media/problemSolv.ddf49384f01d0b6de6c0.png"
+                  "https://www.incimages.com/uploaded_files/image/1920x1080/getty_588960966_354337.jpg"
                 }
               />
 
@@ -171,7 +171,7 @@ const Skills = forwardRef((props, ref) => {
                 height="130px"
                 margin="2px 18%"
                 src={
-                  "https://abhijitnr.github.io/static/media/timeManage.4644a4b2b8ed5f538eec.png"
+                  "https://www.agiledrop.com/sites/default/files/styles/blog_big_teaser/public/2020-02/Time%20management%20cover%201.png?itok=XOER9TUD"
                 }
               />
 

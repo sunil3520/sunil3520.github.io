@@ -4,9 +4,15 @@ import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 
 const Home = forwardRef((props, ref) => {
+
+
+  const handleResumeButton=()=>{
+    window.open("https://drive.google.com/file/d/14lPmsIALQLdUtgME7E7ACVkja1TGcIoE/view?usp=sharing","_ blank")
+  }
+  
   const property = {
     imageUrl: "https://avatars.githubusercontent.com/u/76693614?v=4",
-    imageAlt: "Shivam Profile Picture",
+    imageAlt: "Sunil Profile Picture",
   };
 
   return (
@@ -45,7 +51,8 @@ const Home = forwardRef((props, ref) => {
 
           <Box margin="10px">
             <a  href="Sunil_Chaudhary_Resume.pdf" download>
-              <Button
+              <Button 
+               onClick={handleResumeButton}
                 id="resume-button-2"
                 display={"inline-flex"}
                 fontSize={{ base: "sm", md: "md" }}

@@ -37,11 +37,11 @@ const About = forwardRef((props, ref) => {
               mb="8px"
               fontWeight="semibold"
             >
-              My name is Sunil Chaudhary. I am from Bhagalpur, Bihar ( India )
-              and I enjoy creating things that live on the internet.
+              I is Sunil Chaudhary. I am from Bhagalpur, Bihar ( India )
+              and I enjoy creating things and live on the internet.
             </Box>
-            <Box fontSize={{ base: "12px", md: "18px" }} mb="8px">
-              I am a passionate and self-motivated Aspiring Full-Stack Web
+            <Box fontSize={{ base: "14px", md: "18px" }} mb="8px">
+              I am a passionate and self-motivated Aspiring Full-Stack MERN
               Developer. Seeking challenging oppurtunities to make the best use
               of my abilities and knowledge to develop both my professional and
               interpersonal skills, along with fulfilling the organization's

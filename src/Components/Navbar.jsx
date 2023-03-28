@@ -81,6 +81,10 @@ export default function Navbar({ refs }) {
     ref.current.scrollIntoView({ behavior: "smooth" });
   };
 
+  const handleResumeButton=()=>{
+    window.open("https://drive.google.com/file/d/14lPmsIALQLdUtgME7E7ACVkja1TGcIoE/view?usp=sharing","_ blank")
+  }
+
   return (
     <div id="nav-menu">
       <Box
@@ -96,20 +100,14 @@ export default function Navbar({ refs }) {
             size={"md"}
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
             aria-label={"Open Menu"}
-            display={{ md: "none" }}
+            display={{ lg: "none" }}
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={"center"}>
             {/* Navbar Logo */}
             <NavLink to="/">
-              {/* <Image
-                objectFit="cover"
-                boxSize="100%"
-                width="125px"
-                height="50px"
-                src={"Logo.jpeg"}
-              /> */}
-              <Box color="black" fontWeight="bold" marginRight={"150px"} marginLeft="20px" fontSize="35px">
+              
+              <Box color="black" fontFamily={"cursive"} fontWeight="bold" marginRight={"12px"} marginLeft="20px" fontSize="32px">
                 SUNIL
               </Box>
             </NavLink>
@@ -117,8 +115,8 @@ export default function Navbar({ refs }) {
             {/* Navbar items */}
             <HStack
               as={"nav"}
-              spacing={4}
-              display={{ base: "none", md: "flex" }}
+              spacing={"4"}
+              display={{ base: "none", lg: "flex" }}
             >
               {Links.map((link) => (
                 <NavLink to={link.to} className={link.class}>
@@ -131,9 +129,9 @@ export default function Navbar({ refs }) {
 
           {/* Resume Button */}
           <Flex alignItems={"center"}>
-            <a target="_blank" href="Sunil_Chaudhary_Resume.pdf" download>
               <Button
-              marginRight={"50px"}
+              onClick={handleResumeButton}
+              marginRight={"10px"}
                 id="resume-button-1"
                 className="nav-link resume"
                 display={"inline-flex"}
@@ -149,14 +147,17 @@ export default function Navbar({ refs }) {
                   border: "1px solid red",
                 }}
               >
-                Resume
+            <a  href="Sunil_Chaudhary_Resume.pdf"  download>
+              
+               Resume
+               </a>
               </Button>
-            </a>
+           
           </Flex>
         </Flex>
 
         {isOpen ? (
-          <Box pb={4} display={{ md: "none" }} p="static">
+          <Box pb={4} display={{ md: "lg" }} p="static">
             <Stack as={"nav"} spacing={4}>
               {Links.map((link) => (
                 <NavLink to={link.to} className={link.class}>

@@ -55,7 +55,7 @@ const TechSkill = forwardRef((props, ref) => {
                 height="130px"
                 margin="2px 18%"
                 src={
-                  "https://abhijitnr.github.io/static/media/html.75bdf0b057c088503944680032ea6347.svg"
+                  "https://cdn-icons-png.flaticon.com/512/1532/1532556.png"
                 }
               />
 
@@ -85,7 +85,7 @@ const TechSkill = forwardRef((props, ref) => {
                 height="130px"
                 margin="2px 18%"
                 src={
-                  "https://abhijitnr.github.io/static/media/css.afb434f6d712d3e4ff53be8da4d9876a.svg"
+                  "https://camo.githubusercontent.com/119b29ca4b9d31cf3969a94eb57fcfbbea0879b493c09c89dc6d4b7fb9e0dc37/68747470733a2f2f63646e2e776f726c64766563746f726c6f676f2e636f6d2f6c6f676f732f6373732d332e737667"
                 }
               />
 
@@ -115,7 +115,7 @@ const TechSkill = forwardRef((props, ref) => {
                 height="130px"
                 margin="2px 18%"
                 src={
-                  "https://abhijitnr.github.io/static/media/javascript.f84ec7103324dc7e616d00ed43ecd531.svg"
+                  "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png"
                 }
               />
 
@@ -145,7 +145,7 @@ const TechSkill = forwardRef((props, ref) => {
                 height="130px"
                 margin="2px 18%"
                 src={
-                  "https://abhijitnr.github.io/static/media/react.c3a0b34aae466451a91157424eec1ee3.svg"
+                  "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png"
                 }
               />
 
@@ -175,7 +175,7 @@ const TechSkill = forwardRef((props, ref) => {
                 height="130px"
                 margin="2px 18%"
                 src={
-                  "https://abhijitnr.github.io/static/media/redux.0e4fb1c819ac4c060c92343147d4ccf7.svg"
+                  "https://w7.pngwing.com/pngs/413/852/png-transparent-redux-react-logo-javascript-dq-purple-violet-text-thumbnail.png"
                 }
               />
 
@@ -205,7 +205,7 @@ const TechSkill = forwardRef((props, ref) => {
                 height="130px"
                 margin="2px 18%"
                 src={
-                  "https://abhijitnr.github.io/static/media/nodejs-icon.615ffbea9529ca7047ed8a912bfd94b2.svg"
+                  "https://www.turing.com/blog/wp-content/uploads/2021/11/node-js-logo.png"
                 }
               />
 
@@ -235,7 +235,7 @@ const TechSkill = forwardRef((props, ref) => {
                 height="130px"
                 margin="2px 18%"
                 src={
-                  "https://abhijitnr.github.io/static/media/express-js-icon.ea97b712340ffb8f11d85ccb96309507.svg"
+                  "https://wsofter.ru/wp-content/uploads/2017/12/node-express.png"
                 }
               />
 
@@ -265,7 +265,7 @@ const TechSkill = forwardRef((props, ref) => {
                 height="130px"
                 margin="2px 18%"
                 src={
-                  "https://abhijitnr.github.io/static/media/mongoDB.4428e2ce754003752672dce4c3d81b9d.svg"
+                  "https://www.tutorialsteacher.com/Content/images/home/mongodb.svg"
                 }
               />
 
@@ -306,35 +306,7 @@ const TechSkill = forwardRef((props, ref) => {
             </Stack>
           </GridItem>
 
-          {/* Tenth Tech Stack */}
-          <GridItem>
-            <Stack
-              borderWidth="1px"
-              borderRadius="lg"
-              m="auto"
-              w={{ sm: "90%", md: "90%" }}
-              height="auto"
-              direction={{ base: "column", md: "column" }}
-              bg={useColorModeValue("black", "gray.900")}
-              boxShadow={"xl"}
-              padding="10px"
-              margin={4}
-              textAlign="center"
-            >
-              <Image
-                width={{ base: "70px", md: "100px" }}
-                height="130px"
-                margin="2px 18%"
-                src={
-                  "https://abhijitnr.github.io/static/media/bootstrap.3b3ab2cfe7cdf9d8eb417ce32f573b04.svg"
-                }
-              />
-
-              <Heading fontSize={"xl"} fontFamily={"body"} color="white">
-                Bootstrap
-              </Heading>
-            </Stack>
-          </GridItem>
+          
 
           {/* Eleventh Tech Stack */}
           <GridItem>
@@ -356,7 +328,7 @@ const TechSkill = forwardRef((props, ref) => {
                 height="130px"
                 margin="2px 18%"
                 src={
-                  "https://abhijitnr.github.io/static/media/git.2d7df16e58dae6c26bba033ee2e8c4d8.svg"
+                  "https://github.githubassets.com/images/modules/open_graph/github-octocat.png"
                 }
               />
 
