@@ -50,7 +50,7 @@ const Home = forwardRef((props, ref) => {
           </Box>
 
           <Box margin="10px">
-            <a  href="Sunil_Chaudhary_Resume.pdf" download>
+            <a  href="Sunil-Chaudhary-Resume.pdf" download>
               <Button 
                onClick={handleResumeButton}
                 id="resume-button-2"

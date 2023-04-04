@@ -147,7 +147,7 @@ export default function Navbar({ refs }) {
                   border: "1px solid red",
                 }}
               >
-            <a  href="Sunil_Chaudhary_Resume.pdf"  download>
+            <a  href="Sunil-Chaudhary-Resume.pdf"  download>
               
                Resume
                </a>
@@ -170,7 +170,7 @@ export default function Navbar({ refs }) {
         ) : null}
       </Box>
 
-      {/* <Box p={4}>Main Content Here</Box> */}
+    
     </div>
   );
 }

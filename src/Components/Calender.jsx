@@ -25,10 +25,10 @@ const Calender = () => {
     <div style={{ padding: "18px", backgroundColor: "rgb(198, 213, 206)" }}>
       <Box
         fontWeight="bold"
-        fontSize={{ base: "22px", md: "45px" }}
+        fontSize={{ base: "22px", md: "35px" }}
         marginBottom="15px"
         textAlign={{ base: "center" }}
-        textDecoration="underline"
+        // textDecoration="underline"
       >
         Github Activity
       </Box>

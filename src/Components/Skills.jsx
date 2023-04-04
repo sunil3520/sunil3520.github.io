@@ -18,22 +18,22 @@ const Skills = forwardRef((props, ref) => {
         padding={{ base: "10px 1%", md: "10px", lg: "10px 22%" }}
       >
         <Box
-          color="red.600"
+          color="black.600"
           fontWeight="bold"
-          fontSize={{ base: "22px", md: "45px" }}
+          fontSize={{ base: "22px", md: "35px" }}
           textAlign={{ base: "center" }}
-          textDecoration="underline"
+          // textDecoration="underline"
         >
           My Skills
         </Box>
 
         {/* Soft Skills */}
-        <Heading
+        {/* <Heading
           paddingLeft={{ base: "12px", md: "25px" }}
-          textDecoration="underline"
+          // textDecoration="underline"
         >
           Soft Skills
-        </Heading>
+        </Heading> */}
         <Grid
           templateColumns={{
             base: "repeat(2,1fr)",

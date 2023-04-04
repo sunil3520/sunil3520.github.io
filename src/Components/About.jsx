@@ -7,9 +7,9 @@ const About = forwardRef((props, ref) => {
       <Box>
         <Box
           fontWeight="bold"
-          fontSize={{ base: "22px", md: "45px" }}
+          fontSize={{ base: "22px", md: "35px" }}
           textAlign={{ base: "center" }}
-          textDecoration="underline"
+          // textDecoration="underline"
         >
           About me
         </Box>
@@ -37,15 +37,21 @@ const About = forwardRef((props, ref) => {
               mb="8px"
               fontWeight="semibold"
             >
-              I is Sunil Chaudhary. I am from Bhagalpur, Bihar ( India )
-              and I enjoy creating things and live on the internet.
+              I am Sunil Chaudhary. I am from Bhagalpur, Bihar ( India ) and I
+              enjoy creating things and live on the internet.
             </Box>
             <Box fontSize={{ base: "14px", md: "18px" }} mb="8px">
-              I am a passionate and self-motivated Aspiring Full-Stack MERN
-              Developer. Seeking challenging oppurtunities to make the best use
-              of my abilities and knowledge to develop both my professional and
-              interpersonal skills, along with fulfilling the organization's
-              growth and goals.
+              Welcome to my Portfolio.
+              I am a Full Stack MERN Developer with expertise in MongoDB,
+              Express, React, and Node.js. I build and deploy full-scale web
+              applications using these technologies. In addition to my MERN
+              stack skills, I am proficient in HTML, CSS, and JavaScript and
+              familiar with tools like Git, Webpack, and NPM. I have excellent
+              problem-solving and communication skills and can work
+              independently or as part of a team. My goal is to deliver
+              high-quality, user-friendly, and responsive web applications that
+              exceed my clients' expectations. Contact me to discuss how I can
+              help bring your ideas to life
             </Box>
           </Box>
         </Box>

@@ -21,9 +21,9 @@ const TechSkill = forwardRef((props, ref) => {
         <Box
           color="red.600"
           fontWeight="bold"
-          fontSize={{ base: "22px", md: "45px" }}
+          fontSize={{ base: "22px", md: "35px" }}
           textAlign={{ base: "center" }}
-          textDecoration="underline"
+          // textDecoration="underline"
         >
           Tech Stack
         </Box>

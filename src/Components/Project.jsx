@@ -21,9 +21,9 @@ const Project = forwardRef((props, ref) => {
         <Box
           color="yellow"
           fontWeight="bold"
-          fontSize={{ base: "22px", md: "45px" }}
+          fontSize={{ base: "22px", md: "35px" }}
           textAlign={{ base: "center" }}
-          textDecoration="underline"
+          // textDecoration="underline"
         >
           Some projects I've Built
         </Box>
