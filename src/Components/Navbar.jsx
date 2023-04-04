@@ -147,7 +147,7 @@ export default function Navbar({ refs }) {
                   border: "1px solid red",
                 }}
               >
-            <a  href="Sunil-Chaudhary-Resume.pdf"  download>
+            <a id="resume-link-1"  href="Sunil-Chaudhary-Resume.pdf"  download>
               
                Resume
                </a>
