@@ -1,44 +1,58 @@
-import About from "./Components/About";
-import Home from "./Components/Home";
-import Navbar from "./Components/Navbar";
-import Calender from "./Components/Calender";
-import Stats from "./Components/Stats";
-import Project from "./Components/Project";
-import TechSkill from "./Components/TechSkill";
-import Skills from "./Components/Skills";
-import Chat from "./Components/Chat";
-import { useRef } from "react";
+import React from "react";
+import { Header } from "./components/Header/Header";
+import "./App.css";
+import { ThemeContext } from "./Context/theme";
+import { About } from "./components/About/About";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import Form from "./components/Contact/Form";
+import { Github } from "./components/About/Github";
+import { Projects } from "./components/Projects/Project";
+import { Contact } from "./components/Contact/Contact";
+import { Footer } from "./components/Footer/Footer";
+import { ScrollToTop } from "./components/ScrollToTop/ScrollToTop";
 
-function App() {
-  const homeRef = useRef(null);
-  const aboutRef = useRef(null);
-  const projectRef = useRef(null);
-  const techStackRef = useRef(null);
-  const skillsRef = useRef(null);
-  const contactRef = useRef(null);
+// import { Navbar } from "./components/Navbar/Navbar";
+export default function App() {
+  const [{ themename }] = React.useContext(ThemeContext);
+  
+  React.useEffect(() => {
+
+    
+    Aos.init({ duration: 1500 });
+  }, []);
+
+  // disable right click and settings
+  // window.addEventListener("contextmenu", (e) => e.preventDefault());
+  // window.addEventListener("keydown", (e) => {
+  //   if (e.keyCode === 123) e.preventDefault();
+  //   if (e.ctrlKey && e.shiftKey && e.keyCode === 73) e.preventDefault();
+  //   if (e.ctrlKey && e.shiftKey && e.keyCode === 74) e.preventDefault();
+  //   if (e.ctrlKey && e.shiftKey && e.keyCode === 67) e.preventDefault();
+  //   if (e.ctrlKey && e.shiftKey && e.keyCode === 86) e.preventDefault();
+  // });
 
   return (
-    <div ref={homeRef} className="App">
-      <Navbar
-        refs={{
-          homeRef,
-          aboutRef,
-          projectRef,
-          techStackRef,
-          skillsRef,
-          contactRef,
-        }}
-      />
-      <Home ref={homeRef} />
-      <About ref={aboutRef} />
-      <Project ref={projectRef} />
-      <Calender />
-      <Stats />
-      <TechSkill ref={techStackRef} />
-      <Skills ref={skillsRef} />
-      <Chat ref={contactRef} />
+    <div id="top" className={`${themename} app`}>
+      <section id="home">
+        <Header />
+      </section>
+      <main>
+        <About />
+        <Github />
+        <section id="#projects">
+          {/* <Projects /> */}
+        </section>
+        <section id="#contact">
+          <Contact />
+          {/* <ChakraProvider> */}
+          <Form />
+          {/* </ChakraProvider> */}
+        </section>
+        
+      </main>
+      <Footer />
+        <ScrollToTop /> 
     </div>
   );
 }
-
-export default App;

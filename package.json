@@ -1,25 +1,35 @@
 {
   "homepage": "https://sunil3520.github.io",
-  "name": "my-portfolio",
+  "name": "portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@chakra-ui/icons": "^2.0.15",
-    "@chakra-ui/react": "^2.4.6",
-    "@emotion/react": "^11.10.5",
-    "@emotion/styled": "^11.10.5",
+    "@chakra-ui/react": "^2.4.1",
+    "@emailjs/browser": "^3.9.1",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/icons": "^4.11.3",
+    "@material-ui/utils": "^4.11.3",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "framer-motion": "^8.1.9",
+    "aos": "^2.3.4",
+    "emailjs": "^4.0.1",
+    "formik": "^2.2.9",
+    "framer-motion": "^10.0.0",
+    "material-react-toastify": "^1.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-github-calendar": "^3.4.0",
-    "react-icons": "^4.7.1",
-    "react-router-dom": "^6.6.1",
+    "react-fa-icon": "^0.1.4",
+    "react-github-calendar": "^3.3.4",
+    "react-icons": "^4.6.0",
     "react-scripts": "5.0.1",
-    "react-tooltip": "^4.5.1",
-    "web-vitals": "^2.1.4"
+    "react-toastify": "^9.1.1",
+    "react-vertical-timeline-component": "^3.5.2",
+    "typewriter-effect": "^2.19.0",
+    "web-vitals": "^2.1.4",
+    "yup": "^1.1.1"
   },
   "scripts": {
     "predeploy": "npm run build",
@@ -46,5 +56,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }
