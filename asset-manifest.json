@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.cbca1546.css",
-    "main.js": "/static/js/main.0d74e2c3.js",
+    "main.js": "/static/js/main.8af0583c.js",
     "static/media/bewkoof.gif": "/static/media/bewkoof.e4f2341b1a0944945c23.gif",
-    "static/media/Flipkart.gif": "/static/media/Flipkart.00c11ebf67265542e74c.gif",
+    "static/media/Flipkart.gif": "/static/media/Flipkart.b9201e14fbc9df90bc06.gif",
     "static/media/dot&key.gif": "/static/media/dot&key.9fa1e0559c5246f3cafb.gif",
     "static/media/cronometer.gif": "/static/media/cronometer.5a6891e0e53e4468b9da.gif",
     "static/media/Sunil-Chaudhary-Resume.pdf": "/static/media/Sunil-Chaudhary-Resume.9f2ef2d52ccfd9e41c0a.pdf",
     "static/media/dmasgame.gif": "/static/media/dmasgame.045f7922179909c39aa1.gif",
     "index.html": "/index.html",
     "main.cbca1546.css.map": "/static/css/main.cbca1546.css.map",
-    "main.0d74e2c3.js.map": "/static/js/main.0d74e2c3.js.map"
+    "main.8af0583c.js.map": "/static/js/main.8af0583c.js.map"
   },
   "entrypoints": [
     "static/css/main.cbca1546.css",
-    "static/js/main.0d74e2c3.js"
+    "static/js/main.8af0583c.js"
   ]
 }
