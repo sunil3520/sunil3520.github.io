@@ -1,24 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.780db555.css",
-    "main.js": "/static/js/main.8efe49e3.js",
-    "static/media/EmployeeManagement.gif": "/static/media/EmployeeManagement.21c41471352dda112030.gif",
-    "static/media/RazerClone.gif": "/static/media/RazerClone.1e72de4964bccb64e229.gif",
+    "main.css": "/static/css/main.cbca1546.css",
+    "main.js": "/static/js/main.0d74e2c3.js",
+    "static/media/bewkoof.gif": "/static/media/bewkoof.e4f2341b1a0944945c23.gif",
     "static/media/Flipkart.gif": "/static/media/Flipkart.00c11ebf67265542e74c.gif",
-    "static/media/wordGame.gif": "/static/media/wordGame.6b6fc800e51584225159.gif",
-    "static/media/pumaClone.gif": "/static/media/pumaClone.da55bfc24f4b4c33451f.gif",
-    "static/media/nykaaClone.gif": "/static/media/nykaaClone.c7d1b0ae94c768fdfce2.gif",
-    "static/media/cricketClone.gif": "/static/media/cricketClone.aed7e6c7f6620a0abafd.gif",
-    "static/media/pluralSight.gif": "/static/media/pluralSight.63949e6a1bcbd78b695e.gif",
-    "static/media/apple.gif": "/static/media/apple.75e1b20591bf330b6fd8.gif",
-    "static/media/CustomizeUmbrella.gif": "/static/media/CustomizeUmbrella.039ec8aa346c06df36f5.gif",
-    "static/media/arpit-mishra-resume.pdf": "/static/media/arpit-mishra-resume.682d16eed9c0a4d21993.pdf",
+    "static/media/dot&key.gif": "/static/media/dot&key.9fa1e0559c5246f3cafb.gif",
+    "static/media/cronometer.gif": "/static/media/cronometer.5a6891e0e53e4468b9da.gif",
+    "static/media/Sunil-Chaudhary-Resume.pdf": "/static/media/Sunil-Chaudhary-Resume.9f2ef2d52ccfd9e41c0a.pdf",
+    "static/media/dmasgame.gif": "/static/media/dmasgame.045f7922179909c39aa1.gif",
     "index.html": "/index.html",
-    "main.780db555.css.map": "/static/css/main.780db555.css.map",
-    "main.8efe49e3.js.map": "/static/js/main.8efe49e3.js.map"
+    "main.cbca1546.css.map": "/static/css/main.cbca1546.css.map",
+    "main.0d74e2c3.js.map": "/static/js/main.0d74e2c3.js.map"
   },
   "entrypoints": [
-    "static/css/main.780db555.css",
-    "static/js/main.8efe49e3.js"
+    "static/css/main.cbca1546.css",
+    "static/js/main.0d74e2c3.js"
   ]
 }
