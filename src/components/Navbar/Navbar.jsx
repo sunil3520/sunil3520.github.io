@@ -17,6 +17,18 @@ export const Navbar = () => {
     }
     setShowNavList(!showNavList);
   };
+
+  const handleOpenAndDownloadResume = (e) =>{
+     e.preventDefault();  
+     window.open("https://drive.google.com/file/d/14lPmsIALQLdUtgME7E7ACVkja1TGcIoE/view", "_blank");
+          
+     // Create a temporary link element for downloading
+      const downloadLink = document.createElement("a");
+      downloadLink.href = "https://drive.google.com/uc?export=download&id=14lPmsIALQLdUtgME7E7ACVkja1TGcIoE";
+      document.body.appendChild(downloadLink);
+      downloadLink.click();
+      document.body.removeChild(downloadLink);
+  }
   return (
     <div className="fullbar">
       <nav className="center nav">
@@ -81,12 +93,12 @@ export const Navbar = () => {
           <li className="nav__list-item">
             <a
               href={resume}
-              onClick={()=>{window.open("https://drive.google.com/file/d/14lPmsIALQLdUtgME7E7ACVkja1TGcIoE/view" , "blank")}}
+              onClick={(e)=>handleOpenAndDownloadResume(e)}
               className="link link--nav"
               target="_blank"
               rel="noreferrer"
             
-              download={"Sunil-Chaudhary-Resume"}
+              
             >
               Resume
             </a>
